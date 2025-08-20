@@ -1,3 +1,3 @@
-@include('foxadmin::header')
+@include('foxsun::header')
     @yield('content')
-@include('foxadmin::footer')
+@include('foxsun::footer')

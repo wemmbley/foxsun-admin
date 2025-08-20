@@ -4,15 +4,11 @@ use Foxsun\Admin\Http\Middlewares\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/admin/auth', function() {
-    return view('foxadmin::pages.auth');
+    return view('foxsun::pages.auth');
 });
 
-Route::prefix('/admin')
-    ->middleware(AdminMiddleware::class)
-    ->group(function() {
-
-        Route::get('/', function() {
-            dd(\Illuminate\Support\Facades\Auth::user());
-        });
-
+Route::prefix('/admin')->middleware(AdminMiddleware::class)->group(function() {
+    Route::get('/', function() {
+        return view('foxsun::pages.dashboard');
+    });
 });

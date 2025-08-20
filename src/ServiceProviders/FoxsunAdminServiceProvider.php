@@ -19,8 +19,18 @@ class FoxsunAdminServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        View::addNamespace('foxadmin', __DIR__ . '/../../resources/views');
+        $this->registerViewNamespaces();
         $this->loadTranslationsFrom(__DIR__ . '/../../resources/langs', 'foxsun');
+        $this->registerBladeErrorDirective();
+    }
+
+    private function registerViewNamespaces(): void
+    {
+        View::addNamespace('foxsun', __DIR__ . '/../../resources/views');
+    }
+
+    private function registerBladeErrorDirective(): void
+    {
         Blade::directive('formError', function ($field) {
             return "<?php if(\$errors->has($field)): ?>
                         <div class='text-red mt-1'>

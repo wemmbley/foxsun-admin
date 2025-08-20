@@ -11,7 +11,8 @@
     <style>
         :root {
             --tblr-primary: #ff0000;
-            --tblr-radius: 2px;
+            /*--svg-color: var(--tblr-primary);*/
+            --tblr-border-radius-lg: 18px;
         }
         .swal-modal {background-color: var(--tblr-bg-surface);}
         .swal-text, .swal-title {color: var(--tblr-gray-100);}
