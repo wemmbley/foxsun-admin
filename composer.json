@@ -1,0 +1,11 @@
+{
+    "name": "foxsun/admin",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Foxsun\\Admin\\": "src/"
+        }
+    },
+    "require": {}
+}
