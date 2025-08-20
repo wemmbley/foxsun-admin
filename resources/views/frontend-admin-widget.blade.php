@@ -15,7 +15,7 @@
             <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
           </svg>
         </span>
-                <span class="adminbar__label">Дешборд</span>
+                <span class="adminbar__label">{{ __('foxsun::frontend-admin-widget.dashboard') }}</span>
             </a>
 
             <!-- Изменить -->
@@ -26,7 +26,7 @@
             <path d="M7 16c.55 0 1 .45 1 1 0 1.66-1.34 3-3 3S2 18.66 2 17s1.34-3 3-3c.55 0 1 .45 1 1s-.45 1-1 1a1 1 0 100 2 1 1 0 001-1c0-.55.45-1 1-1zm13.71-9.29l-5.42-5.42a1 1 0 00-1.41 0L6 9.17V12h2.83l7.88-7.88 2.59 2.59A1 1 0 0020.71 6.71z"/>
           </svg>
         </span>
-                <span class="adminbar__label">Изменить</span>
+                <span class="adminbar__label">{{ __('foxsun::frontend-admin-widget.change') }}</span>
             </button>
 
             <!-- Новый (дропдаун) -->
@@ -38,12 +38,12 @@
               <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/>
             </svg>
           </span>
-                    <span class="adminbar__label">Новый</span>
+                    <span class="adminbar__label">{{ __('foxsun::frontend-admin-widget.new.title') }}</span>
                     <span class="adminbar__caret" aria-hidden="true">▾</span>
                 </button>
                 <ul class="adminbar__dropdown" role="menu">
-                    <li role="none"><a role="menuitem" href="/admin/posts/create">Новый пост</a></li>
-                    <li role="none"><a role="menuitem" href="/admin/users/create">Новый пользователь</a></li>
+                    <li role="none"><a role="menuitem" href="/admin/posts/create">{{ __('foxsun::frontend-admin-widget.new.post') }}</a></li>
+                    <li role="none"><a role="menuitem" href="/admin/users/create">{{ __('foxsun::frontend-admin-widget.new.user') }}</a></li>
                 </ul>
             </div>
         </nav>
