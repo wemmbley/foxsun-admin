@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Foxsun\Admin\ServiceProviders;
 
 use Foxsun\Admin\Components\AuthComponent;
+use Foxsun\Admin\Components\Widgets\MemoryUsageComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -15,6 +16,7 @@ class FoxsunAdminServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Livewire::component('auth-form', AuthComponent::class);
+        Livewire::component('memory-usage-widget', MemoryUsageComponent::class);
     }
 
     public function register(): void

@@ -7,8 +7,8 @@
                 <div class="container-xl">
                     <div class="row g-2 align-items-center">
                         <div class="col">
-                            <div class="page-pretitle">Overview</div>
-                            <h2 class="page-title">Dashboard</h2>
+                            <div class="page-pretitle">{{ __('foxsun::dashboard.overview') }}</div>
+                            <h2 class="page-title">{{ __('foxsun::dashboard.dashboard') }}</h2>
                         </div>
                         @include('foxsun::pages.dashboard-toolbar')
                     </div>
@@ -20,7 +20,7 @@
                         <div class="col-lg-6">
                             <div class="row row-cards">
                                 <div class="col-12">
-                                    @include('foxsun::components.widgets.memory-usage')
+                                    <livewire:memory-usage-widget />
                                 </div>
                             </div>
                         </div>
