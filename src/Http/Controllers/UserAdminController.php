@@ -17,8 +17,17 @@ class UserAdminController extends AdminController
         'email',
     ];
 
-    public function index()
-    {
+    public array $actions = [
+        'create',
+        'delete',
+        'edit',
+    ];
 
+    public function index(): array
+    {
+        return [
+            'name' => 'Список пользователей',
+            'per_page' => 2,
+        ];
     }
 }

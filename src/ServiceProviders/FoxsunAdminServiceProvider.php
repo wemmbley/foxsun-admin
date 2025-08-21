@@ -7,6 +7,7 @@ namespace Foxsun\Admin\ServiceProviders;
 use Foxsun\Admin\Abstracts\AdminContainer;
 use Foxsun\Admin\Components\AuthComponent;
 use Foxsun\Admin\Components\Widgets\MemoryUsageComponent;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
@@ -27,6 +28,7 @@ class FoxsunAdminServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__ . '/../../resources/langs', 'foxsun');
         $this->registerBladeErrorDirective();
         $this->registerRouteMacros();
+        Paginator::defaultView('foxsun::paginator');
     }
 
     public function registerRouteMacros(): void

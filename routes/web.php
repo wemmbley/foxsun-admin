@@ -14,5 +14,5 @@ Route::prefix('/admin')->middleware(AdminMiddleware::class)->group(function() {
 
     Route::foxsun(\Foxsun\Admin\Http\Controllers\UserAdminController::class);
 
-    Route::get('/{modelName}/{action}', [\Foxsun\Admin\Http\Controllers\AdminCrudAutoloader::class, 'load']);
+    Route::get('/{modelName}/{action}/{id?}', [\Foxsun\Admin\Http\Controllers\AdminCrudAutoloader::class, 'load']);
 });

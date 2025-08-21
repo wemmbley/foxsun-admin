@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Invoices</h3>
+        <h3 class="card-title">{{ $tableName }}</h3>
     </div>
     <div class="table-responsive">
         <table class="table table-selectable card-table table-vcenter text-nowrap datatable">
@@ -30,10 +30,10 @@
                     <td>$887</td>
                     <td class="text-end">
                         <span class="dropdown">
-                            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
+                            <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Действия</button>
                             <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="#"> Action </a>
-                                <a class="dropdown-item" href="#"> Another action </a>
+                                <a class="dropdown-item" href="#">Редактировать</a>
+                                <a class="dropdown-item" href="#">Удалить</a>
                             </div>
                         </span>
                     </td>

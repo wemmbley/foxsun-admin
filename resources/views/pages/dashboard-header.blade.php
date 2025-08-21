@@ -1,5 +1,5 @@
 @php
-    $overview = $subtitle ?? __('foxsun::dashboard.overview');
+    $overview = $overview ?? __('foxsun::dashboard.overview');
     $subtitle = $subtitle ?? __('foxsun::dashboard.dashboard');
 @endphp
 <div class="page">

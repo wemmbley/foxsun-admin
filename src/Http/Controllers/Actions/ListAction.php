@@ -4,26 +4,21 @@ declare(strict_types=1);
 
 namespace Foxsun\Admin\Http\Controllers\Actions;
 
-use Foxsun\Admin\Abstracts\AdminContainer;
-use Illuminate\Support\Str;
-
 class ListAction
 {
-    public function __construct(
-        private AdminContainer $container,
-    )
-    {}
+    use Action;
 
     public function loadTable($modelName)
     {
-        $modelName = Str::singular($modelName);
-        $controller = app()->make($this->container->getByName($modelName));
-        $model = app()->make($controller->model);
-
-        $listFields = $controller->fields;
+        $this->initAction($modelName);
+        $listFields = $this->controller->fields;
+        $paginationCount = $this->controller->index()['per_page'];
 
         return view('foxsun::pages.actions.list', [
-            'models' => $model->select($listFields)->paginate(10)->all(),
+            'titles' => $listFields,
+            'models' => $this->model->select($listFields)->paginate($paginationCount),
+            'tableName' => $this->controller->index()['name'],
+            'modelName' => $modelName,
         ]);
     }
 }
