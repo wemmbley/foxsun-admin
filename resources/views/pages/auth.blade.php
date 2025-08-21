@@ -1,4 +1,4 @@
-@extends('foxadmin::master')
+@extends('foxsun::master')
 @section('content')
     <div class="page page-center">
         <div class="container container-tight py-4">

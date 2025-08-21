@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace Foxsun\Admin\ServiceProviders;
 
+use Foxsun\Admin\Abstracts\AdminContainer;
 use Foxsun\Admin\Components\AuthComponent;
 use Foxsun\Admin\Components\Widgets\MemoryUsageComponent;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
@@ -24,6 +26,17 @@ class FoxsunAdminServiceProvider extends ServiceProvider
         $this->registerViewNamespaces();
         $this->loadTranslationsFrom(__DIR__ . '/../../resources/langs', 'foxsun');
         $this->registerBladeErrorDirective();
+        $this->registerRouteMacros();
+    }
+
+    public function registerRouteMacros(): void
+    {
+        Route::macro('foxsun', function (string $controller) {
+            $registry = app(AdminContainer::class);
+            $registry->push($controller);
+
+            return $controller;
+        });
     }
 
     private function registerViewNamespaces(): void

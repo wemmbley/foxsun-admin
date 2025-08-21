@@ -17,14 +17,14 @@ class AuthComponent extends Component
 
     public function render()
     {
-        return view('foxadmin::components.auth-form');
+        return view('foxsun::components.auth-form');
     }
 
     public function submit()
     {
         $this->validate([
             'email' => 'required|email',
-            'password' => 'required|min:6|max:32',
+            'password' => 'required|string',
         ]);
 
         if(!$this->validateAttemptsCount()) {
