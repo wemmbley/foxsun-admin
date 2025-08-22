@@ -39,6 +39,51 @@
                                 <div class="tab-pane active show" id="tab-home" role="tabpanel">
                                     <div class="mt-2">
 
+                                        <div class="col-12">
+                                            <div class="">
+                                                <div class="card-header">
+                                                    <ul class="nav nav-tabs card-header-tabs" data-bs-toggle="tabs" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a href="#tabs-home-3" class="nav-link active ps-5 pe-5" data-bs-toggle="tab" aria-selected="true" role="tab"><!-- Download SVG icon from http://tabler.io/icons/icon/home -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" id="flag-icons-ru" viewBox="0 0 640 480">
+                                                                    <path fill="#fff" d="M0 0h640v160H0z"/>
+                                                                    <path fill="#0039a6" d="M0 160h640v160H0z"/>
+                                                                    <path fill="#d52b1e" d="M0 320h640v160H0z"/>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item" role="presentation">
+                                                            <a href="#tabs-profile-3" class="nav-link ps-5 pe-5" data-bs-toggle="tab" aria-selected="false" tabindex="-1" role="tab"><!-- Download SVG icon from http://tabler.io/icons/icon/user -->
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" id="flag-icons-ua" viewBox="0 0 640 480">
+                                                                    <g fill-rule="evenodd" stroke-width="1pt">
+                                                                        <path fill="gold" d="M0 0h640v480H0z"/>
+                                                                        <path fill="#0057b8" d="M0 0h640v240H0z"/>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active show" id="tabs-home-3" role="tabpanel">
+                                                            <h4>Home tab</h4>
+                                                            <div>
+                                                                Cursus turpis vestibulum, dui in pharetra vulputate id sed non turpis ultricies fringilla at sed facilisis lacus pellentesque purus
+                                                                nibh
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="tabs-profile-3" role="tabpanel">
+                                                            <h4>Profile tab</h4>
+                                                            <div>
+                                                                Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <!-- MAIN FORM PAGE -->
                                         <livewire:edit-crud-form :model="$model" :controller="$controller" />
                                         <!-- END MAIN FORM PAGE -->
