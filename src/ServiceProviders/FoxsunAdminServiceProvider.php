@@ -6,6 +6,8 @@ namespace Foxsun\Admin\ServiceProviders;
 
 use Foxsun\Admin\Abstracts\AdminContainer;
 use Foxsun\Admin\Components\AuthComponent;
+use Foxsun\Admin\Components\EditCrudFormComponent;
+use Foxsun\Admin\Components\Fields\TextFieldComponent;
 use Foxsun\Admin\Components\Widgets\MemoryUsageComponent;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Blade;
@@ -20,6 +22,8 @@ class FoxsunAdminServiceProvider extends ServiceProvider
     {
         Livewire::component('auth-form', AuthComponent::class);
         Livewire::component('memory-usage-widget', MemoryUsageComponent::class);
+        Livewire::component('edit-crud-form', EditCrudFormComponent::class);
+        $this->registerCrudFields();
     }
 
     public function register(): void
@@ -39,6 +43,11 @@ class FoxsunAdminServiceProvider extends ServiceProvider
 
             return $controller;
         });
+    }
+
+    private function registerCrudFields()
+    {
+        Livewire::component('text-field', TextFieldComponent::class);
     }
 
     private function registerViewNamespaces(): void

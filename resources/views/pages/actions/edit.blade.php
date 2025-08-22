@@ -40,18 +40,7 @@
                                     <div class="mt-2">
 
                                         <!-- MAIN FORM PAGE -->
-                                        <form>
-                                            <div class="space-y">
-                                                <div>
-                                                    <label class="form-label"> First Name </label>
-                                                    <input type="text" placeholder="Enter first name" class="form-control">
-                                                </div>
-                                                <div>
-                                                    <label class="form-label"> Message </label>
-                                                    <textarea placeholder="Enter your message" rows="6" class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <livewire:edit-crud-form :model="$model" :controller="$controller" />
                                         <!-- END MAIN FORM PAGE -->
 
                                     </div>
@@ -193,7 +182,7 @@
                                             </div>
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <a href="" class="ms-2 btn-4 w-25">Удалить</a>
-                                                <a href="#" class="btn btn-primary btn-4 w-50">
+                                                <a href="#" class="btn btn-primary btn-4 w-50" id="publish-btn">
                                                     Опубликовать
                                                 </a>
                                             </div>
@@ -283,6 +272,11 @@
 
         new ApexCharts(document.querySelector('#seo-chart'), options).render();
 
+    </script>
+    <script>
+        document.getElementById('publish-btn').addEventListener('click', () => {
+            document.getElementById('edit-crud-form').requestSubmit();
+        });
     </script>
     @include('foxsun::pages.dashboard-footer')
 @endsection

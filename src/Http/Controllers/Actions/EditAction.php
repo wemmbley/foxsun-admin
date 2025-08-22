@@ -12,6 +12,9 @@ class EditAction
     {
         $this->initAction($modelName);
 
-        return view('foxsun::pages.actions.edit', []);
+        return view('foxsun::pages.actions.edit', [
+            'model' => $this->model,
+            'controller' => $this->controller,
+        ]);
     }
 }

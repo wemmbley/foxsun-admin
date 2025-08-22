@@ -30,4 +30,29 @@ class UserAdminController extends AdminController
             'per_page' => 2,
         ];
     }
+
+    public function editId(): false
+    {
+        return false;
+    }
+
+    public function editName(): array
+    {
+        return [
+            'input' => 'text',
+            'rules' => 'required|string',
+            'label' => 'Имя пользователя',
+            'placeholder' => 'Введите имя пользователя',
+        ];
+    }
+
+    public function editEmail(): array
+    {
+        return [
+            'label' => 'Email',
+            'input' => 'text',
+            'rules' => 'required|email',
+            'placeholder' => 'Введите email пользователя',
+        ];
+    }
 }
