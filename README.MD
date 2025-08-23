@@ -1,13 +1,11 @@
 # Foxsun
 
-<img src="foxsun.png" alt="logo" size="128">
-
-Foxsun - make things possible!
+<img src="docs/.img/foxsun.png" alt="logo" size="128">
 
 ## Web adminbar
 
-<img src="screen-frontend.png" alt="frontend-admin">
+<img src="docs/.img/screen-frontend.png" alt="frontend-admin">
 
 ## Admin panel
 
-<img src="screen-admin.png" alt="admin">
+<img src="docs/.img/screen-admin.png" alt="admin">
