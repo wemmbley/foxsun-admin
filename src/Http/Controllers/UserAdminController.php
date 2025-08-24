@@ -10,6 +10,12 @@ use Foxsun\Admin\Abstracts\AdminController;
 class UserAdminController extends AdminController
 {
     public string $model = User::class;
+    public bool $isTranslatable = false;
+    public bool $isSeoEnabled = false;
+    public bool $isAnalyticsEnabled = false;
+    public bool $isCacheEnabled = false;
+    public bool $isCategoriesEnabled = false;
+    public bool $isTaxonomiesEnabled = false;
 
     public array $fields = [
         'id',
@@ -28,6 +34,22 @@ class UserAdminController extends AdminController
         return [
             'name' => 'Список пользователей',
             'per_page' => 2,
+        ];
+    }
+
+    public function edit(): array
+    {
+        return [
+            [
+                'node' => 'div',
+                'class' => 'col-6',
+                'fields' => ['name'],
+            ],
+            [
+                'node' => 'div',
+                'class' => 'col-6',
+                'fields' => ['email'],
+            ],
         ];
     }
 
